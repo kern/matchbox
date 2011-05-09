@@ -1,0 +1,5 @@
+require 'bundler/setup'
+require 'test/unit'
+require 'contest'
+require 'mocha'
+require 'matchbox'

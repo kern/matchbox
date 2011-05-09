@@ -9,12 +9,16 @@ Gem::Specification.new do |s|
   s.authors     = ['Alexander Kern']
   s.email       = ['alex@kernul.com']
   s.homepage    = 'https://github.com/CapnKernul/matchbox'
-  s.summary     = %q{Use RSpec and Shoulda matcher in plain-old Test::Unit}
+  s.summary     = %q{Use RSpec and Shoulda matchers in Test::Unit}
   s.description = %q{Adds Test::Unit assertions for RSpec and Shoulda matchers}
   
   s.rubyforge_project = 'matchbox'
   
   s.add_development_dependency 'test-unit'
+  s.add_development_dependency 'contest'
+  s.add_development_dependency 'mocha'
+  s.add_development_dependency 'yard'
+  s.add_development_dependency 'maruku'
   
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
