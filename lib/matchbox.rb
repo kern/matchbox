@@ -3,7 +3,7 @@
 # I created this since:
 # 
 # * I like assertions, not the Shoulda "should" statements.
-# * I want to use `shoulda-matchers` in my Rails project.
+# * I want to use shoulda-matchers in my Rails project.
 # * I'm in love with the simplicity of the contest gem.
 # 
 # These methods are based upon those found in shoulda-context.
