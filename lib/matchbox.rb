@@ -38,6 +38,10 @@ module Matchbox
   end
 end
 
-class Test::Unit::TestCase
-  include Matchbox
+module Test
+  module Unit
+    class TestCase
+      include Matchbox
+    end
+  end
 end
