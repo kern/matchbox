@@ -1,10 +1,10 @@
 require 'bundler'
 Bundler::GemHelper.install_tasks
 
-task :default => 'test:unit'
+task :default => 'test'
 
 require 'rake/testtask'
-Rake::TestTask.new('test:unit') do |t|
+Rake::TestTask.new do |t|
   t.ruby_opts += ['-rubygems']
   t.libs << 'test'
   t.pattern = 'test/test_*.rb'
