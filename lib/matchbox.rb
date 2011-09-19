@@ -24,7 +24,9 @@ module Matchbox
   # @raises [Test::Unit::AssertionFailedError] if the assertion fails
   def assert_accepts(matcher, target)
     matched = matcher.matches?(target)
-    assert_block(matcher.failure_message) { matched }
+    message = matcher.failure_message
+    
+    message ? assert(matched, message) : assert(matched)
   end
   
   # Asserts that a matcher does not match a given target.
@@ -34,7 +36,9 @@ module Matchbox
   # @raises [Test::Unit::AssertionFailedError] if the assertion fails
   def assert_rejects(matcher, target)
     matched = matcher.matches?(target)
-    assert_block(matcher.negative_failure_message) { !matched }
+    message = matcher.negative_failure_message
+    
+    message ? assert(!matched, message) : assert(!matched)
   end
 end
 
